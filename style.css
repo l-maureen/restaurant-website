@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: burlywood !important;
+}
+/*.header-top{
+    text-align: center;
+    margin-top: 60px;
+}*/
+/*.header-top img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}*/
+/*header section*/
+.header{
+    background-color: burlywood;
+    /*It seems like it looks better without the box-shadow.*/
+    /*box-shadow: 0 0 10px 0 rgba(0,0,100,0.2);*/
+    /*The width of 100% moves the background color with box-shadow that acts like a navbar extends to entire page horizontally.*/
+    width: 100%;
+    /*The values of position, top, and z-index displays that the navbar and the nav-link in it stays at its position when scrolling down the page.*/
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar{
+    /*The margin-top of 60px moves the navbar down. It gives space between the logo and the top of the navbar.*/
+    margin-top: 60px;
+    /*The first value of padding expands inside the navbar, up and down.*/
+    padding: 15px 0 !important;
+    /*The value of margin-left moves the elements (nav-item and navbar-brand)in the navbar to the right. It does not spread each nav-link apart from each other horizontally.*/
+    /*The "Navbar" (navbar-brand) on the navbar moves to the left, but not the nav-item, which is on the right becuase of adding ml-auto in the navbar-nav class.*/
+    margin-left: 8px;
+}
+.navbar-nav{
+    /*The margin-left of 260px moves the nav-link to the center without spreading each nav-link apart from each other horizontally.*/
+    /*margin-left: 260px;*/
+}
+.navbar-brand{
+    color: black !important;
+}
+.nav-item{
+    /*I can use padding-left or margin-left to spread each nav-link or item apart from each other horizontally.*/
+  padding-left: 50px;
+}
+.nav-link{
+  color: black !important;
+}
+.navbar-nav li a{
+     /*This displays for mobile screens. The float of right moves the navbar-nav links to the right.*/
+    float: right !important;   
+}
+/*When I add this in the @media, it doesn't work. It only works here. */
+.fa-bars{
+    font-size: 30px !important;
+}
+.navbar-toggler{
+    /*The value of outline removes the border around the menu bar.*/
+    outline: none !important;
+    border: none !important;
+}
+/*review*/
+.review{
+    /*margin: 100px 0;*/
+    /*The margin-top of 80px moves gives space between the bottom of the navbar and the top of the review section, which is the carousel-item image.*/
+    margin-top: 50px;
+}
+.carousel-item img{
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    /*I don't have to add margin-top because it automatically show the space between the navbar and the carousel image.*/
+    object-fit: cover;
+}
+.carousel-indicators li{
+    padding-top: 30px;
+    margin-top: 50px;
+    margin-bottom: -10px;
+    border-radius: 5px;
+}
+/*about section*/
+.about, .services{
+   /*padding: 10px;*/
+   /*I use margin-top instead of padding to gives space between the bottom review section and the top of about section.*/
+   margin-top: 80px;
+}
+.about img, .services img{
+    width: 90%;
+}
+.about h2, .services h2{
+    /*The margin-top of 115px moves the about h2 down.*/
+    margin-top: 70px;  
+    /*The margin-bottom of 20px gives space between the about h2 and about p.*/
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.about p, .services p{
+    /*The margin-bottom of 30px gives space between the bottom about p and the about a.*/
+    margin-bottom: 30px;
+}
+.about a, .services a{
+    background-color: black;
+    box-shadow: 0 0 10px 0 rgba(0,0,100,0.2);
+    /*The value of padding expands inside the background a that acts like a border.*/
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none !important;
+    /*The display of inline-block or inline-flex doesn't expands the background color. But if I use only display block, it will.*/
+    display: inline-block;
+    border-radius: 5px;
+}
+.about a:hover, .services a:hover{
+    color: white;
+}
+/*menu section*/
+.menu{
+    /*The margin-top of 60px gives space between the bottom of the about section and the top of menu section.*/
+    margin-top: 80px;
+}
+.menu h2{
+    /*The margin-top of 50px gives space between the bottom of the about section and the beginning of the menu section.*/
+    margin-top: 70px;
+    /*The margin-bottom of 20px gives space between the menu h2 and menu ul and li*/
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.menu img{
+    width: 90%;
+    height: 65vh;
+    /*The margin-left of 50px moves the menu image to the right.*/
+    margin-left: 50px;
+}
+.menu h6{
+    font-weight: 600;
+    /*The margin-bottom of 30px gives space between each menu ul (includes li).*/
+    margin-bottom: 20px;
+}
+.menu p{
+    font-weight: 100;
+    list-style-type: none;
+    /*The padding-top of 5px gives space between the menu ul and menu li. I don't use margin-top because move the menu ul too.*/
+    margin-top: -10px;
+}
+.menu a{
+    background-color: black;
+    box-shadow: 0 0 10px 0 rgba(0,0,100,0.2);
+    /*The value of padding expands inside the background a that acts like a border.*/
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none !important;
+    /*The display of inline-block or inline-flex doesn't expands the background color. But if I use only display block, it will.*/
+    display: inline-block;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/*footer*/
+.footer{
+    /*border: 1px solid white;*/
+    /*The margin-top of 80px gives space between the bottom of the service section and th top of the footer section.*/
+    margin-top: 80px;
+    
+}
+.footer h5{
+    margin-bottom: 20px;
+}
+.footer-column{
+    /*The text-align of center center the footer col h5 and p.*/   
+    text-align: center;
+}
+@media only screen and (max-width: 770px){
+    .menu img{
+        /*The margin-top of 10px gives space betweent the menu a ("Discover More" like button) and the menu image (the sushi)*/
+        margin-top: 50px;
+        /*The margin-left of 20px moves the menu image to the center.*/
+        margin-left: 20px !important;
+    }
+    .menu{
+        /*The margin-top of 60px gives space between the bottom of the about section and the top of menu section.*/
+        margin-top: -30px;
+    }
+    .review{
+        /*margin: 100px 0;*/
+        /*The margin-top of 80px moves gives space between the bottom of the navbar and the top of the review section, which is the carousel-item image.*/
+        margin-top: 30px;
+    }
+    .carousel-item img{
+        width: 100%;
+        /*The height of 70vh reduces the height of the carousel-item image.*/
+        height: 70vh;
+        margin: auto;
+        /*I don't have to add margin-top because it automatically show the space between the navbar and the carousel image.*/
+    }
+    .about img{
+        width: 90%;
+         /*The margin-left of 20px moves the menu image to the center.*/
+        margin-left: 20px !important;
+    }
+    .services img{
+        margin-left: 20px;
+    }
+}
+    
+
+
+
+
